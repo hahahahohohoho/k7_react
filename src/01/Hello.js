@@ -1,7 +1,7 @@
 function Hello(){
     return (
         <p>
-          k-digital 7기
+          k-digital 7기1111
         </p>
     );
 }
