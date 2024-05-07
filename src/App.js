@@ -1,14 +1,27 @@
-import logo from './logo.svg';
+// import logo from './logo.svg'
 import './App.css';
-import Hello from './01/Hello';
+import { GoHome } from "react-icons/go";
+// import MyDiv from './03 copy/MyDiv';
+import MyList from './04/MyList';
+// import MyClock from './02/MyClock';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Hello />
-      </header>
+    <div className="flex flex-col w-full max-w-screen-xl mx-auto h-screen overflow-y-auto max-w-auto">
+        <header className='flex justify-between items-center text-xl font-bold h-20 p-10 bg-slate-300'>
+          <div>리액트연습</div>
+          <div><GoHome className='text-3xl'/></div>
+        </header>
+        <main className='grow flex justify-center items-center'>
+          {/* <div className='flex justify-center items-center'>
+            <img src={logo} className='App-logo' alt="logo"/>
+          </div> */}
+          {/* <MyDiv/> */}
+          <MyList/>
+        </main>
+        <footer className='flex justify-center items-center text-white bg-slate-800 h-20'>
+          @2024 Kim seon sin. All Right reserved.
+        </footer>
     </div>
   );
 }
