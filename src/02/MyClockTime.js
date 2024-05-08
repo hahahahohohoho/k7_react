@@ -1,18 +1,18 @@
 import './style.css'
 import stlyes from './My.module.css'
+import {useState} from "react"; 
 
 function MyClockTime(){
+    const [time, setTime] = useState();
     const now = new Date();
-    const nowStr = now.toLocaleDateString();
+    setTime(now.toLocaleDateString());
     // const gubun = nowStr.substring(0,2);
     // const st = {color : "yellow", fontWeight : "bold"}
     return(
         <>
             {/* {(gubun == '오전') ? <h2 className='div1'>현재 시간: {nowStr}</h2>
             : <h2 className='div2'>현재 시간: {nowStr}</h2>} */}
-            <h2 className={stlyes.c1}
-            // className={gubun === '오전'? "div1":"div2"}
-            >현재 시간: {nowStr}</h2>
+            <h2 className={stlyes.c1}>현재 시간: {time}</h2>
         </>
     );
 }
