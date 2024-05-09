@@ -1,14 +1,14 @@
+import MyClockImage from "./MyClockImage";
 import MyClockTime from "./MyClockTime";
-import MyClockimage from "./MyClockimage";
 
+function MyClock() {
 
-function MyClock(){
-
-    return(
-        <>
-            <MyClockimage/>
-            <MyClockTime/>
-        </>
-    )
+  return(
+    <header className="w-full h-full flex flex-col justify-center items-center bg-slate-200">
+      <MyClockImage />
+      <MyClockTime /> 
+    </header>
+  );
 }
-export default MyClock
+
+export default MyClock ;

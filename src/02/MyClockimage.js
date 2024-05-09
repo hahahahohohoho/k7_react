@@ -1,11 +1,12 @@
-import cimg from './colock.png';
+import cimg from './colock.png'; 
 
+function MyClockImage() {
 
-function MyClockimage(){
-    return(
-        <>
-            <img src={cimg} alt="clock"/>
-        </>
-    );
+  return (
+    <div>
+      <img src={cimg} alt="logo" /> 
+    </div>
+  );
 }
-export default MyClockimage;
+
+export default MyClockImage;

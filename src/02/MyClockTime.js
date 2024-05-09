@@ -1,24 +1,32 @@
-import './style.css'
-import stlyes from './My.module.css'
-import {useState} from "react"; 
+import { useState, useEffect } from 'react';
 
-function MyClockTime(){
-    const [time, setTime] = useState();
-    const now = new Date();
-    setTime(now.toLocaleDateString());
-    // const gubun = nowStr.substring(0,2);
-    // const st = {color : "yellow", fontWeight : "bold"}
-    return(
-        <>
-            {/* {(gubun == '오전') ? <h2 className='div1'>현재 시간: {nowStr}</h2>
-            : <h2 className='div2'>현재 시간: {nowStr}</h2>} */}
-            <h2 className={stlyes.c1}>현재 시간: {time}</h2>
-        </>
-    );
+function MyClockTime() {
+  const [ctime, setCTime] = useState(new Date());
+    
+
+  // const gubun = nowStr.substring(0, 2) ;
+  // const st = {
+  //               color : "yellow", 
+  //               fontWeight : "bold"
+  //             } ;
+
+  // let divStyle ;
+  // if (gubun == '오전') divStyle = "div1" ;
+  // else divStyle = "div2" ;
+  useEffect(()=>{
+    const tm = setInterval(()=>{
+      setCTime(new Date())
+    },1000);
+    return ()=>{
+      clearInterval(tm);
+    }
+  },[])
+
+  return(
+      <div className="text-blue-900 text-2xl font-bold mt-5">
+        {ctime.toLocaleTimeString()}
+      </div> 
+  );
 }
-export default MyClockTime;
 
-// return 안에는 if문 불가능! -> 삼항연산자 활용
-// state 활용하여 업데이트 가능(추후)
-// 일반 css를 import하면 전체에 적용
-// 컴포넌트만 적용하려면 모듈(파일명.module.css)
+export default MyClockTime ;

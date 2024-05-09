@@ -1,6 +1,7 @@
 // import logo from './logo.svg'
-import Lotto from './05/Lotto';
-import BoxOffice from './06/BoxOffice';
+// import Lotto from './05/Lotto';
+import MyClock from './02/MyClock';
+// import BoxOffice from './06/BoxOffice';
 import './App.css';
 import { GoHome } from "react-icons/go";
 // import MyDiv from './03 copy/MyDiv';
@@ -20,7 +21,8 @@ function App() {
           {/* <MyDiv/> */}
           {/* <MyList/> */}
           {/* <Lotto/> */}
-          <BoxOffice/>
+          {/* <BoxOffice/> */}
+          <MyClock/>
         </main>
         <footer className='flex justify-center items-center text-white bg-slate-800 h-20'>
           @2024 Kim seon sin. All Right reserved.
