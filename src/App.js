@@ -1,9 +1,10 @@
 // import logo from './logo.svg'
 // import Lotto from './05/Lotto';
-import MyClock from './02/MyClock';
+// import MyClock from './02/MyClock';
 // import BoxOffice from './06/BoxOffice';
 import './App.css';
 import { GoHome } from "react-icons/go";
+import FoodMain from './fooddata/FoodMain';
 // import MyDiv from './03 copy/MyDiv';
 // import MyList from './04/MyList';
 
@@ -22,7 +23,8 @@ function App() {
           {/* <MyList/> */}
           {/* <Lotto/> */}
           {/* <BoxOffice/> */}
-          <MyClock/>
+          {/* <MyClock/> */}
+          <FoodMain/>
         </main>
         <footer className='flex justify-center items-center text-white bg-slate-800 h-20'>
           @2024 Kim seon sin. All Right reserved.
