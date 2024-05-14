@@ -4,7 +4,8 @@
 // import BoxOffice from './06/BoxOffice';
 import './App.css';
 import { GoHome } from "react-icons/go";
-import FoodMain from './fooddata/FoodMain';
+// import FoodMain from './fooddata/FoodMain';
+import TrafficMain from './08/TrafficMain';
 // import MyDiv from './03 copy/MyDiv';
 // import MyList from './04/MyList';
 
@@ -24,7 +25,8 @@ function App() {
           {/* <Lotto/> */}
           {/* <BoxOffice/> */}
           {/* <MyClock/> */}
-          <FoodMain/>
+          {/* <FoodMain/> */}
+          <TrafficMain/>
         </main>
         <footer className='flex justify-center items-center text-white bg-slate-800 h-20'>
           @2024 Kim seon sin. All Right reserved.

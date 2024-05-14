@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function FoodMain() {
   const [odvList, setOdvList] = useState([]);
   let odv = fdt.map(item=>item['운영주체 분류']);
-  odv = [...new Set(odv)];
+  odv = [...new Set(odv)]; //set을 통해 중복 제거
   let tm =[]
   const handleC1 = (c)=>{
     tm = fdt.filter(item=> item['운영주체 분류'] === c).map(item => <FoodCard key={item.사업장명} data={item}/> )
