@@ -32,7 +32,6 @@ export default function Festival() {
     //gdata 업데이트 시
     useEffect(() => {
         if (!gdata) return
-        console.log(gdata)
         let tm1 = gdata.map(item => item.GUGUN_NM)
         tm1 = [...new Set(tm1)].sort()
         setOps(tm1)
