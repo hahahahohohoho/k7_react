@@ -15,7 +15,6 @@ export default function Gallery() {
       .then(resp => resp.json())
       .then(data => {
         setGdata(data.response.body.items.item)
-        console.log("fetch", data)
       })
   }
   const handleOK = () =>{
