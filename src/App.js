@@ -18,31 +18,31 @@ import { GoHome } from "react-icons/go";
 
 function App() {
   return (
-  <BrowserRouter>
-    <div className="flex flex-col w-full max-w-screen-xl mx-auto h-screen overflow-y-auto max-w-auto">
+    <BrowserRouter>
+      <div className="flex flex-col w-full max-w-screen-xl mx-auto h-screen overflow-y-auto max-w-auto">
         <header className='flex justify-between items-center text-xl font-bold h-20 p-10 bg-slate-300'>
           <div>리액트연습</div>
           <ul className="flex items-center">
-                <li><Link to='/clock' className="mx-3">시계</Link></li>
-                <li><Link to='/lot' className="mx-3">로또</Link></li>
-                <li><Link to='/food' className="mx-3">푸드뱅크</Link></li>
-                <li><Link to='/box' className="mx-3">박스오피스</Link></li>
-                <li><Link to='/fest' className="mx-3">축제</Link></li>
-                <li><Link to='/gal' className="mx-3">관광사진</Link></li>
-                
+            <li><Link to='/clock' className="mx-3">시계</Link></li>
+            <li><Link to='/lot' className="mx-3">로또</Link></li>
+            <li><Link to='/food' className="mx-3">푸드뱅크</Link></li>
+            <li><Link to='/box' className="mx-3">박스오피스</Link></li>
+            <li><Link to='/fest' className="mx-3">축제</Link></li>
+            <li><Link to='/gal' className="mx-3">관광사진</Link></li>
+
           </ul>
-          <div><GoHome className='text-3xl'/></div>
-          
+          <div><GoHome className='text-3xl' /></div>
+
         </header>
         <main className='grow flex justify-center items-center'>
-                <Routes> 
-                    <Route path="/box" element={<BoxOffice/>}/>
-                    <Route path="/lot" element={<Lotto/>}/>
-                    <Route path="/clock" element={<MyClock/>}/>
-                    <Route path="/fest" element={<Festival/>}/>
-                    <Route path="/gal" element={<Gallery/>}/>
-                    <Route path="/food" element={<FoodMain/>}/>
-                </Routes>
+          <Routes>
+            <Route path="/box" element={<BoxOffice />} />
+            <Route path="/lot" element={<Lotto />} />
+            <Route path="/clock" element={<MyClock />} />
+            <Route path="/fest" element={<Festival />} />
+            <Route path="/gal" element={<Gallery />} />
+            <Route path="/food" element={<FoodMain />} />
+          </Routes>
 
           {/* <div className='flex justify-center items-center'>
             <img src={logo} className='App-logo' alt="logo"/>
@@ -61,8 +61,8 @@ function App() {
         <footer className='flex justify-center items-center text-white bg-slate-800 h-20'>
           @2024 Kim seon sin. All Right reserved.
         </footer>
-    </div>
-          </BrowserRouter>
+      </div>
+    </BrowserRouter>
   );
 }
 
