@@ -7,8 +7,8 @@ import BoxOffice from './06/BoxOffice';
 import Festival from './11/Festival';
 import Gallery from './10/Gallery';
 import FoodMain from './fooddata/FoodMain';
-
-
+import Frcst from "./13_날씨예보/Frcst";
+import FrcstList from "./13_날씨예보/FrcstList";
 import './App.css';
 import { GoHome } from "react-icons/go";
 // import TrafficMain from './08/TrafficMain';
@@ -29,6 +29,7 @@ function App() {
             <li><Link to='/box' className="mx-3">박스오피스</Link></li>
             <li><Link to='/fest' className="mx-3">축제</Link></li>
             <li><Link to='/gal' className="mx-3">관광사진</Link></li>
+            <li><Link to='/frcst' className="mx-3">날씨예보</Link></li>
 
           </ul>
           <div><GoHome className='text-3xl' /></div>
@@ -42,6 +43,8 @@ function App() {
             <Route path="/fest" element={<Festival />} />
             <Route path="/gal" element={<Gallery />} />
             <Route path="/food" element={<FoodMain />} />
+            <Route path="/frcst" element={<Frcst />} />
+            <Route path="/frclst" element={<FrcstList />} />
           </Routes>
 
           {/* <div className='flex justify-center items-center'>

@@ -3,7 +3,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 export default function BoxOfficeTbody({ dailyList, setSelMv}) {
   const handleMvSelect = (mv)=>setSelMv(mv);
 
-  const tags = dailyList.map(item =>
+  const tags = dailyList!=null && dailyList.map(item =>
     <tr key={item.movieCd}
       onClick={()=> {handleMvSelect(item)}}
       className="border-b border-neutral-200 hover:bg-neutral-100 ">
