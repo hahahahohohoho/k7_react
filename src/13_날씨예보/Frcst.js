@@ -6,6 +6,7 @@ import ButtonC from '../UI/ButtonC'
 
 export default function Frcst() {
   // const [date, setDate] = useState()
+  
   const [op, setOp] = useState()
   const [x, setX] = useState()
   const [area, setArea] = useState()
@@ -21,24 +22,21 @@ export default function Frcst() {
     navigate(`/frclst?gubun=${gubun}&x=${x}&y=${y}&dt=${selDate.current.value.replaceAll('-','')}&area=${area}`)
   }
   const handleArea = ()=>{
-    
     let tm = getxy.filter(item => item['1단계'] === selOp.current.value)
     tm = tm[0]
     setArea(tm['1단계'])
     setX(tm['격자 X'])
     setY(tm['격자 Y'])
   }
-  function getToday(){
+  const getToday = ()=>{
     var date = new Date();
     var year = date.getFullYear();
     var month = ("0" + (1 + date.getMonth())).slice(-2);
     var day = ("0" + date.getDate()).slice(-2);
-
     return year + "-" + month + "-" + day;
 }
 
   useEffect(() => {
-    
     let tm = getxy.map(item => item['1단계'])
     setOp(tm)
   }, [])
