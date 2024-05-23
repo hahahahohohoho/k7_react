@@ -28,6 +28,15 @@ export default function Frcst() {
     setX(tm['격자 X'])
     setY(tm['격자 Y'])
   }
+  function getToday(){
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = ("0" + (1 + date.getMonth())).slice(-2);
+    var day = ("0" + date.getDate()).slice(-2);
+
+    return year + "-" + month + "-" + day;
+}
+
   useEffect(() => {
     
     let tm = getxy.map(item => item['1단계'])
@@ -36,17 +45,13 @@ export default function Frcst() {
   return (
     <div className="w-full h-full flex flex-col items-center">
         <div className="flex , m-5 justify-center items-center">
-          <input type="date"
+          <input type="date" max={getToday()}
             className="mx-5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5 "
             id='date' ref={selDate} />
           <SelectC initMsg='지역을 선택하세요' ops={op} selRef={selOp} handleChange ={handleArea}/>
           <div className="flex justify-center items-center text-xl font-bold">
             <ButtonC caption={'단기예보'} bcolor={'blue'} handleClick={()=>{handleUrl('단기')}}/>
             <ButtonC caption={'초단기예보'} bcolor={'blue'} handleClick={()=>{handleUrl('초단기')}}/>
-
-
-            {/* <Link to='/frclst?dt=selDate&nx=0&ny=0&gubun=0' className="m-5">단기예보</Link>
-            <Link to='/frclst' className="m-5">초단기예보</Link> */}
           </div>
         </div>
     </div>

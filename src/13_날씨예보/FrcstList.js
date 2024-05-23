@@ -18,7 +18,7 @@ export default function Frcst() {
                 console.error('Error fetching data:', error);
             });
     }
-
+    
     const [ops, setOps] = useState(); //select options
     const [selItem, setSelItem] = useState();
     const [tags, setTags] = useState();
@@ -88,7 +88,7 @@ export default function Frcst() {
         <div className="w-full h-full flex flex-col justify-start items-center">
             <div className="w-1/2 flex justify-between items-center my-5 ">
                 <Link to='/frcst' className="text-lg font-bold">날씨예보 홈</Link>
-                <span className="text-xl font-bold">{gubun}예보</span> <span className="text-emerald-800 text-xl font-bold">{area} </span>
+                <span className="text-xl font-bold">{gubun}예보</span> <span className="text-emerald-800 text-2xl font-bold">{area} </span>
                 {ops && <SelectC id='sel' initMsg='항목을 선택하세요' ops={ops} selRef={selRef} handleChange={() => selOp()} />}
             </div>
             <div className="w-2/3">
