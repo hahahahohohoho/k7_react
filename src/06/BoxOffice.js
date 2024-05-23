@@ -10,7 +10,7 @@ export default function BoxOffice() {
   const selDate = useRef()
 
   //데이터 가져오기
-  const getFectchData = (url) =>{
+  const getFetchData = (url) =>{
     fetch(url)
       .then(resp =>resp.json())
       .then(data => setDailyList(data.boxOfficeResult.dailyBoxOfficeList))
@@ -23,7 +23,7 @@ export default function BoxOffice() {
     let url = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?'
     url = url + `key=${process.env.REACT_APP_MV_KEY}`
     url = url + `&targetDt=${selDate.current.value.replaceAll('-','')}`
-    getFectchData(url)
+    getFetchData(url)
   }
 
 

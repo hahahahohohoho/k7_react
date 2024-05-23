@@ -18,7 +18,7 @@ export default function Frcst() {
       alert('날짜와 지역을 선택하세요')
       return
     }
-    navigate(`/frclst?gubun=${gubun}&x=${x}&y=${y}&dt=${selDate.current.value}&area=${area}`)
+    navigate(`/frclst?gubun=${gubun}&x=${x}&y=${y}&dt=${selDate.current.value.replaceAll('-','')}&area=${area}`)
   }
   const handleArea = ()=>{
     
